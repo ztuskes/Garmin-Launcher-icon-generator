@@ -51,7 +51,6 @@ Before you begin, ensure you have met the following requirements:
    - `generate.py`: The main script that automates the folder and resource creation.
    - `product_sizes.py`: A Python module containing a predefined list of Garmin product IDs and corresponding icon sizes.
    - `original.png`: The original launcher icon to be resized for each product.
-   - `manifest.xml`: The Garmin Connect IQ manifest file with a list of products.
 
    The directory structure should look like this:
 
@@ -60,7 +59,6 @@ Before you begin, ensure you have met the following requirements:
    ├── generate.py
    ├── product_sizes.py
    ├── original.png
-   └── manifest.xml
    ```
 
 2. **Edit `product_sizes.py` (Optional)**
@@ -83,7 +81,7 @@ Before you begin, ensure you have met the following requirements:
 
 1. **Place the Files in the Same Directory:**
 
-   Ensure that `manifest.xml` and `original.png` are in the same directory as the `generate.py` script.
+   Ensure that `original.png` are in the same directory as the `generate.py` script.
 
 2. **Run the Script:**
 
@@ -116,7 +114,7 @@ Before you begin, ensure you have met the following requirements:
 
    ```xml
    <iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="3">
-       <iq:application entry="App" id="example-app-id" launcherIcon="@Drawables.LauncherIcon" minSdkVersion="4.2.0" name="@Strings.AppName" type="watchface" version="1.0.7">
+       <iq:application entry="App" id="example-app-id" launcherIcon="@Drawables.LauncherIcon" minSdkVersion="4.2.0" name="@Strings.AppName" type="watchface" version="1.0.0">
            <iq:products>
                <iq:product id="venu2"/>
                <iq:product id="epix2"/>
