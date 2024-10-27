@@ -1,13 +1,13 @@
 import os
 import xml.etree.ElementTree as ET
-from xml.dom import minidom  # For pretty-printing the XML
+from xml.dom import minidom
 from PIL import Image
-from product_sizes import product_sizes  # Import the product sizes from the separate module
+from product_sizes import product_sizes
 
 # Define the path for the original image (in the same folder as the script)
 original_image = 'original.png'
 
-# Get manifest.xml path from user
+# Get manifest.xml
 manifest_path = input("Enter the path to the manifest.xml: ")
 
 # Get the directory where the manifest.xml is located
@@ -19,12 +19,10 @@ root = tree.getroot()
 namespace = {'iq': 'http://www.garmin.com/xml/connectiq'}
 products = root.findall('.//iq:product', namespace)
 
-# Function to handle both integer sizes and 'WxH' format sizes
+# Function to handle integer sizes
 def get_size(size):
     if isinstance(size, int):
-        return size  # If it's already an integer, return it
-    elif isinstance(size, str):
-        return int(size.split('x')[0])  # Extract the width from a 'WxH' string
+        return size
     return None  # Return None if the size is invalid
 
 # Function to generate formatted XML string
