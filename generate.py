@@ -7,7 +7,12 @@ from product_sizes import product_sizes
 # Define the path for the original image (in the same folder as the script)
 original_image = 'original.png'
 
-# Get manifest.xml
+# Check if the original image exists
+if not os.path.exists(original_image):
+    print(f"Error: {original_image} not found in the directory. Please place the file in the current folder.")
+    exit(1) # Exit the script with an error code
+
+# Get manifest.xml path
 manifest_path = input("Enter the path to the manifest.xml: ")
 
 # Get the directory where the manifest.xml is located
@@ -37,7 +42,7 @@ for product in products:
     product_id = product.attrib['id']
     
     if product_id in product_sizes:
-        size = get_size(product_sizes[product_id])  # Get the size, handling both int and string formats
+        size = get_size(product_sizes[product_id])  # Get the size as an integer
         if size:
             # Create folder structure inside the manifest directory: resources-{id}/drawables
             product_folder = os.path.join(manifest_dir, f'resources-{product_id}/drawables')
