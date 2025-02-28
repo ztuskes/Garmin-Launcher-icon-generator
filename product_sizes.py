@@ -25,11 +25,14 @@ product_sizes = {
     "montana7xx": 60,
     "oregon7xx": 54,
     "rino7xx": 54,
+    "approachs50": 56,
     "approachs60": 40,
     "approachs62": 35,
     "approachs7042mm": 60,
     "approachs7047mm": 70,
     "legacyherocaptainmarvel": 30,
+    "instinct3amoled45mm": 60,
+    "instinct3amoled50mm": 60,
     "d2air": 60,
     "d2airx10": 70,
     "d2bravo": 40,
@@ -140,7 +143,7 @@ product_sizes = {
     "vivoactive3mlte": 40,
     "vivoactive4": 35,
     "vivoactive4s": 30,
-    "vivoactive5": 70,
+    "vivoactive5": 56,
     "vivoactive_hr": 40,
     "vivolife": 40
 }
