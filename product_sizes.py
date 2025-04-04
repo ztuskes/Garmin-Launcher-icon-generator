@@ -42,6 +42,7 @@ product_sizes = {
     "d2deltapx": 40,
     "d2deltas": 40,
     "d2mach1": 60,
+    "descentg2": 60,
     "legacysagadarthvader": 35,
     "descentg1": 62,
     "descentmk1": 40,
@@ -144,6 +145,7 @@ product_sizes = {
     "vivoactive4": 35,
     "vivoactive4s": 30,
     "vivoactive5": 56,
+    "vivoactive6": 54,
     "vivoactive_hr": 40,
     "vivolife": 40
 }
